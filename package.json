@@ -1,6 +1,6 @@
 {
   "name": "utilex",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "utilex module provides extra functions for node.js applications.",
   "keywords": [
     "node",
@@ -26,7 +26,7 @@
   "contributors": [],
   "main": "./lib/utilex.js",
   "scripts": {
-    "test": "node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5"
+    "test": "node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json"
   },
   "engines": [
     "node >= 0.10.21"
