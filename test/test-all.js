@@ -10,6 +10,7 @@ var gTestList   = {
       TIDYTIME: true,
       TIDYLOG: true,
       TIDYARGS: true,
+      TIDYCONFIG: true,
       PATHSEP: true,
       PATHCUR: true,
       ENVMODE: true
@@ -42,6 +43,12 @@ if(gTestList.TIDYLOG === true) {
 if(gTestList.TIDYARGS === true) {
   console.log('TIDYARGS:');
   console.log(JSON.stringify(mUtilex.tidyArgs()));
+}
+
+// Test for TIDYCONFIG
+if(gTestList.TIDYCONFIG === true) {
+  console.log('TIDYCONFIG:');
+  console.log(JSON.stringify(mUtilex.tidyConfig()));
 }
 
 // Test for PATHSEP
