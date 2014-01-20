@@ -6,7 +6,7 @@
 
 ### Installation
 
-For latest published version.
+For latest published version
 ```
 npm install utilex
 ```
