@@ -2,7 +2,7 @@
 
   [utilex](http://github.com/cmfatih/utilex) is a [node.js](http://nodejs.org) module for providing extra functions for node.js applications.  
 
-  utilex on [npm registery](http://npmjs.org/package/utilex)
+  utilex on [npm registry](http://npmjs.org/package/utilex)
 
 ### Installation
 
