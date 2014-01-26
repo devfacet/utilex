@@ -2,10 +2,10 @@
 /* jslint node: true */
 'use strict';
 
-var mUtilex     = require('../');   // utilex module
+var mUtilex   = require('../');
 
 // Init vars
-var gTestList   = {
+var gTestList = {
       TIDYCLEAR: false,
       TIDYTIME: true,
       TIDYLOG: true,

@@ -5,6 +5,11 @@
 ```
 ```
 
+### 0.2.4 (2014-01-26)
+
+* Tidy changes
+* Examples
+
 ### 0.2.3 (2014-01-19)
 
 * Tidy changes

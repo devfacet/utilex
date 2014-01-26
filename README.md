@@ -23,6 +23,65 @@ git clone https://github.com/cmfatih/utilex.git
 npm test
 ```
 
+#### Examples
+```javascript
+var mUtilex = require('utilex');
+
+mUtilex.tidyTime();
+// Output
+/*
+2014-01-25 14:05:22
+*/
+
+mUtilex.tidyLog('Tidy log...');
+// Output
+/*
+{ time: '2014-01-25 14:08:39', message: 'Tidy log...' }
+*/
+
+mUtilex.tidyLog('Tidy log...', 'JSONT');
+// Output
+/*
+{
+  "time": "2014-01-25 14:09:33",
+  "message": "Tidy log..."
+}
+*/
+
+mUtilex.tidyArgs()
+// Output
+// command: node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
+/*
+{"arg1":"arg1Val","arg2":"","arg3":"arg3Val","arg4":"","arg5":"","c":"test/config-test.json"}
+*/
+
+mUtilex.tidyConfig()
+// Output
+// command: node -c test/config-test.json
+// config-test.json: {"testKey": "testVal"}
+/*
+{"file":"test/config-test.json","config":{"testKey":"testVal"}}
+*/
+
+mUtilex.pathSep
+// Output
+/*
+/
+*/
+
+mUtilex.pathCur
+// Output
+/*
+/srv/var/utilex
+*/
+
+mUtilex.envMode
+// Output
+/*
+DEV
+*/
+```
+
 ### Changelog
 
 For all notable changes see [CHANGELOG.md](https://github.com/cmfatih/utilex/blob/master/CHANGELOG.md)
