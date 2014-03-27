@@ -6,12 +6,12 @@
 
 ### Installation
 
-For latest published version
+For latest release
 ```
 npm install utilex
 ```
 
-or for HEAD version
+For HEAD
 ```
 git clone https://github.com/cmfatih/utilex.git
 ```
@@ -79,6 +79,12 @@ mUtilex.envMode
 // Output
 /*
 DEV
+*/
+
+mUtilex.dirIsWritable(__dirname);
+// Output
+/*
+true
 */
 ```
 

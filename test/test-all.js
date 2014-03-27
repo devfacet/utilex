@@ -13,7 +13,8 @@ var gTestList = {
       TIDYCONFIG: true,
       PATHSEP: true,
       PATHCUR: true,
-      ENVMODE: true
+      ENVMODE: true,
+      DIRISWRT: true
     }
 ;
 
@@ -39,32 +40,38 @@ if(gTestList.TIDYLOG === true) {
   mUtilex.tidyLog('Tidy log...');
 }
 
-// Test for TIDYARGS
+// Test for tidyArgs
 if(gTestList.TIDYARGS === true) {
   console.log('TIDYARGS:');
   console.log(JSON.stringify(mUtilex.tidyArgs()));
 }
 
-// Test for TIDYCONFIG
+// Test for tidyConfig
 if(gTestList.TIDYCONFIG === true) {
   console.log('TIDYCONFIG:');
   console.log(JSON.stringify(mUtilex.tidyConfig()));
 }
 
-// Test for PATHSEP
+// Test for pathSep
 if(gTestList.PATHSEP === true) {
   console.log('PATHSEP:');
   console.log(mUtilex.pathSep);
 }
 
-// Test for PATHCUR
+// Test for pathCur
 if(gTestList.PATHCUR === true) {
   console.log('PATHCUR:');
   console.log(mUtilex.pathCur);
 }
 
-// Test for ENVMODE
+// Test for envMode
 if(gTestList.ENVMODE === true) {
   console.log('ENVMODE:');
   console.log(mUtilex.envMode);
+}
+
+// Test for dirIsWritable
+if(gTestList.DIRISWRT === true) {
+  console.log('DIRISWRT:');
+  console.log(mUtilex.dirIsWritable(__dirname));
 }

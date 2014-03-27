@@ -1,6 +1,6 @@
 {
   "name": "utilex",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "utilex module provides extra functions for node.js applications.",
   "keywords": [
     "node",
