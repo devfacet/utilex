@@ -81,13 +81,11 @@ if(gTestList.DIRISWRT === true) {
 
 // Test for httpGetFile
 if(gTestList.HTTPGETFILE === true) {
-  console.log('HTTPGETFILE:');
-
   var fp = './nodejs-logo.svg';
   mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', fp).then(function() {
-    console.log('done!');
+    console.log('HTTPGETFILE: done!');
     mFS.unlinkSync(fp);
   }, function(err) {
-    console.log(err);
+    console.log('HTTPGETFILE: Error! ' + err);
   });
 }
