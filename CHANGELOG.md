@@ -5,6 +5,11 @@
 ```
 ```
 
+### 0.2.7 (2014-03-28)
+
+* q module
+* Changes for httpGetFile
+
 ### 0.2.6 (2014-03-28)
 
 * httpGetFile

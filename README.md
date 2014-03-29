@@ -28,19 +28,12 @@ npm test
 var mUtilex = require('utilex');
 
 mUtilex.tidyTime();
-// Output
-/*
-2014-01-25 14:05:22
-*/
+// 2014-01-25 14:05:22
 
 mUtilex.tidyLog('Tidy log...');
-// Output
-/*
-{ time: '2014-01-25 14:08:39', message: 'Tidy log...' }
-*/
+// { time: '2014-01-25 14:08:39', message: 'Tidy log...' }
 
 mUtilex.tidyLog('Tidy log...', 'JSONT');
-// Output
 /*
 {
   "time": "2014-01-25 14:09:33",
@@ -48,56 +41,40 @@ mUtilex.tidyLog('Tidy log...', 'JSONT');
 }
 */
 
-mUtilex.tidyArgs()
-// Output
+mUtilex.tidyArgs();
 // command: node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
-/*
-{"arg1":"arg1Val","arg2":"","arg3":"arg3Val","arg4":"","arg5":"","c":"test/config-test.json"}
-*/
-
-mUtilex.tidyConfig()
 // Output
+// {"arg1":"arg1Val","arg2":"","arg3":"arg3Val","arg4":"","arg5":"","c":"test/config-test.json"}
+
+mUtilex.tidyConfig();
 // command: node -c test/config-test.json
 // config-test.json: {"testKey": "testVal"}
-/*
-{"file":"test/config-test.json","config":{"testKey":"testVal"}}
-*/
-
-mUtilex.pathSep
 // Output
-/*
-/
-*/
+// {"file":"test/config-test.json","config":{"testKey":"testVal"}}
 
-mUtilex.pathCur
+mUtilex.pathSep;
 // Output
-/*
-/srv/var/utilex
-*/
+// /
 
-mUtilex.envMode
+mUtilex.pathCur;
 // Output
-/*
-DEV
-*/
+// /srv/var/utilex
+
+mUtilex.envMode;
+// Output
+// DEV
 
 mUtilex.dirIsWritable(__dirname);
 // Output
-/*
-true
-*/
+// true
 
-mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg', function(err) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log('done!');
-  }
+mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').then(function() {
+  console.log('done!');
+}, function(err) {
+  console.log(err);
 });
 // Output
-/*
-done!
-*/
+// done!
 ```
 
 ### Changelog
