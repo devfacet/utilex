@@ -86,6 +86,18 @@ mUtilex.dirIsWritable(__dirname);
 /*
 true
 */
+
+mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg', function(err) {
+  if(err) {
+    console.log(err);
+  } else {
+    console.log('done!');
+  }
+});
+// Output
+/*
+done!
+*/
 ```
 
 ### Changelog

@@ -2,7 +2,9 @@
 /* jslint node: true */
 'use strict';
 
-var mUtilex   = require('../');
+var mFS     = require('fs'),
+    mUtilex = require('../')
+;
 
 // Init vars
 var gTestList = {
@@ -14,7 +16,8 @@ var gTestList = {
       PATHSEP: true,
       PATHCUR: true,
       ENVMODE: true,
-      DIRISWRT: true
+      DIRISWRT: true,
+      HTTPGETFILE: true
     }
 ;
 
@@ -74,4 +77,18 @@ if(gTestList.ENVMODE === true) {
 if(gTestList.DIRISWRT === true) {
   console.log('DIRISWRT:');
   console.log(mUtilex.dirIsWritable(__dirname));
+}
+
+// Test for httpGetFile
+if(gTestList.HTTPGETFILE === true) {
+  console.log('HTTPGETFILE:');
+  var fp = './nodejs-logo.svg';
+  mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', fp, function(err) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('done!');
+      mFS.unlinkSync(fp);
+    }
+  });
 }
