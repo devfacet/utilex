@@ -35,6 +35,7 @@ if(gTestList.TIDYCLEAR === true) {
 if(gTestList.TIDYTIME === true) {
   console.log('TIDYTIME:');
   console.log(mUtilex.tidyTime());
+  console.log(mUtilex.tidyTime(new Date(1388638740000)));
 }
 
 // Test for tidyLog

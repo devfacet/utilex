@@ -1,8 +1,8 @@
 ## Utilex
 
-  [utilex](http://github.com/cmfatih/utilex) is a [node.js](http://nodejs.org) module for providing extra functions for node.js applications.  
+[utilex](http://github.com/cmfatih/utilex) is a [node.js](http://nodejs.org) module for providing extra functions for node.js applications.  
 
-  utilex on [npm registry](http://npmjs.org/package/utilex)
+utilex on [npm registry](http://npmjs.org/package/utilex)
 
 ### Installation
 
@@ -30,6 +30,9 @@ var mUtilex = require('utilex');
 mUtilex.tidyTime();
 // 2014-01-25 14:05:22
 
+mUtilex.tidyTime(new Date(1388638740000));
+// 2014-01-01 23:59:00
+
 mUtilex.tidyLog('Tidy log...');
 // { time: '2014-01-25 14:08:39', message: 'Tidy log...' }
 
@@ -43,29 +46,25 @@ mUtilex.tidyLog('Tidy log...', 'JSONT');
 
 mUtilex.tidyArgs();
 // command: node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
-// Output
+//
 // {"arg1":"arg1Val","arg2":"","arg3":"arg3Val","arg4":"","arg5":"","c":"test/config-test.json"}
 
 mUtilex.tidyConfig();
 // command: node -c test/config-test.json
 // config-test.json: {"testKey": "testVal"}
-// Output
+//
 // {"file":"test/config-test.json","config":{"testKey":"testVal"}}
 
 mUtilex.pathSep;
-// Output
 // /
 
 mUtilex.pathCur;
-// Output
 // /srv/var/utilex
 
 mUtilex.envMode;
-// Output
 // DEV
 
 mUtilex.dirIsWritable(__dirname);
-// Output
 // true
 
 mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').then(function() {
@@ -73,7 +72,6 @@ mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').th
 }, function(err) {
   console.log(err);
 });
-// Output
 // done!
 ```
 
