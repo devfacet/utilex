@@ -5,6 +5,10 @@
 ```
 ```
 
+### 0.2.9 (2014-04-01)
+
+* Adding date param to tidyTime
+
 ### 0.2.8 (2014-03-28)
 
 * Fix for httpGetFile
