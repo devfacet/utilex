@@ -24,50 +24,43 @@ npm test
 ```
 
 #### Examples
-```javascript
-var mUtilex = require('utilex');
 
-mUtilex.tidyTime();
+```javascript
+var utilex = require('utilex');
+
+utilex.tidyTime();
 // 2014-01-25 14:05:22
 
-mUtilex.tidyTime(new Date(1388638740000));
+utilex.tidyTime(new Date(1388638740000));
 // 2014-01-01 23:59:00
 
-mUtilex.tidyLog('Tidy log...');
+utilex.tidyLog('Tidy log...');
 // { time: '2014-01-25 14:08:39', message: 'Tidy log...' }
 
-mUtilex.tidyLog('Tidy log...', 'JSONT');
-/*
-{
-  "time": "2014-01-25 14:09:33",
-  "message": "Tidy log..."
-}
-*/
-
-mUtilex.tidyArgs();
+utilex.tidyArgs();
 // command: node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
 //
 // {"arg1":"arg1Val","arg2":"","arg3":"arg3Val","arg4":"","arg5":"","c":"test/config-test.json"}
 
-mUtilex.tidyConfig();
+utilex.tidyConfig();
 // command: node -c test/config-test.json
 // config-test.json: {"testKey": "testVal"}
 //
 // {"file":"test/config-test.json","config":{"testKey":"testVal"}}
 
-mUtilex.pathSep;
+utilex.pathSep;
 // /
 
-mUtilex.pathCur;
+utilex.pathCur;
 // /srv/var/utilex
 
-mUtilex.envMode;
+utilex.envMode;
 // DEV
 
-mUtilex.dirIsWritable(__dirname);
+utilex.dirIsWritable(__dirname);
 // true
 
-mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').then(function() {
+utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').then(function() {
   console.log('done!');
 }, function(err) {
   console.log(err);

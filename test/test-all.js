@@ -2,12 +2,12 @@
 /* jslint node: true */
 'use strict';
 
-var mFS     = require('fs'),
-    mUtilex = require('../')
+var utilex = require('../'),
+    fs     = require('fs')
 ;
 
 // Init vars
-var gTestList = {
+var testList = {
       TIDYCLEAR: false,
       TIDYTIME: true,
       TIDYLOG: true,
@@ -22,71 +22,63 @@ var gTestList = {
 ;
 
 // Tests
-console.log('test-all.js');
+utilex.tidyLog('test-all.js');
 
 // Test for tidyClear
-if(gTestList.TIDYCLEAR === true) {
-  console.log('This message will not be shown...');
-  mUtilex.tidyClear();
-  console.log('TIDYCLEAR:OK');
+if(testList.TIDYCLEAR === true) {
+  utilex.tidyLog('tidyClear: This message will not be shown...');
+  utilex.tidyClear();
+  utilex.tidyLog('tidyClear: OK');
 }
 
 // Test for tidyTime
-if(gTestList.TIDYTIME === true) {
-  console.log('TIDYTIME:');
-  console.log(mUtilex.tidyTime());
-  console.log(mUtilex.tidyTime(new Date(1388638740000)));
+if(testList.TIDYTIME === true) {
+  utilex.tidyLog('tidyTime: ' + utilex.tidyTime());
+  utilex.tidyLog('tidyTime: ' + utilex.tidyTime(new Date(1388638740000)));
 }
 
 // Test for tidyLog
-if(gTestList.TIDYLOG === true) {
-  console.log('TIDYLOG:');
-  mUtilex.tidyLog('Tidy log...');
+if(testList.TIDYLOG === true) {
+  utilex.tidyLog('tidyLog: OK');
 }
 
 // Test for tidyArgs
-if(gTestList.TIDYARGS === true) {
-  console.log('TIDYARGS:');
-  console.log(JSON.stringify(mUtilex.tidyArgs()));
+if(testList.TIDYARGS === true) {
+  utilex.tidyLog('tidyArgs: ' + JSON.stringify(utilex.tidyArgs()));
 }
 
 // Test for tidyConfig
-if(gTestList.TIDYCONFIG === true) {
-  console.log('TIDYCONFIG:');
-  console.log(JSON.stringify(mUtilex.tidyConfig()));
+if(testList.TIDYCONFIG === true) {
+  utilex.tidyLog('tidyConfig: ' + JSON.stringify(utilex.tidyConfig()));
 }
 
 // Test for pathSep
-if(gTestList.PATHSEP === true) {
-  console.log('PATHSEP:');
-  console.log(mUtilex.pathSep);
+if(testList.PATHSEP === true) {
+  utilex.tidyLog('pathSep: ' + utilex.pathSep);
 }
 
 // Test for pathCur
-if(gTestList.PATHCUR === true) {
-  console.log('PATHCUR:');
-  console.log(mUtilex.pathCur);
+if(testList.PATHCUR === true) {
+  utilex.tidyLog('pathCur: ' + utilex.pathCur);
 }
 
 // Test for envMode
-if(gTestList.ENVMODE === true) {
-  console.log('ENVMODE:');
-  console.log(mUtilex.envMode);
+if(testList.ENVMODE === true) {
+  utilex.tidyLog('envMode: ' + utilex.envMode);
 }
 
 // Test for dirIsWritable
-if(gTestList.DIRISWRT === true) {
-  console.log('DIRISWRT:');
-  console.log(mUtilex.dirIsWritable(__dirname));
+if(testList.DIRISWRT === true) {
+  utilex.tidyLog('dirIsWritable: ' + utilex.dirIsWritable(__dirname));
 }
 
 // Test for httpGetFile
-if(gTestList.HTTPGETFILE === true) {
+if(testList.HTTPGETFILE === true) {
   var fp = './nodejs-logo.svg';
-  mUtilex.httpGetFile('http://nodejs.org/images/logo.svg', fp).then(function() {
-    console.log('HTTPGETFILE: done!');
-    mFS.unlinkSync(fp);
+  utilex.httpGetFile('http://nodejs.org/images/logo.svg', fp).then(function() {
+    utilex.tidyLog('httpGetFile: done!');
+    fs.unlinkSync(fp);
   }, function(err) {
-    console.log('HTTPGETFILE: Error! ' + err);
+    utilex.tidyLog('httpGetFile: ' + err);
   });
 }

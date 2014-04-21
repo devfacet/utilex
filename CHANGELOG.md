@@ -5,6 +5,10 @@
 ```
 ```
 
+### 0.2.10 (2014-04-21)
+
+* Misc. updates
+
 ### 0.2.9 (2014-04-01)
 
 * Adding date param to tidyTime
