@@ -17,6 +17,7 @@ For HEAD
 ```
 git clone https://github.com/cmfatih/utilex.git
 ```
+[![Build Status](https://travis-ci.org/cmfatih/utilex.svg?branch=master)](https://travis-ci.org/cmfatih/utilex)
 
 ### Usage
 
