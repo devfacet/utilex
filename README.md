@@ -58,6 +58,7 @@ utilex.pathCur;
 // /srv/var/utilex
 
 utilex.envMode;
+// process.env: NODE_ENV
 // DEV
 
 utilex.dirIsWritable(__dirname);
