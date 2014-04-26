@@ -1,8 +1,10 @@
 ## Utilex
 
-[utilex](http://github.com/cmfatih/utilex) is a [node.js](http://nodejs.org) module for providing extra functions for node.js applications.  
+[utilex](http://github.com/cmfatih/utilex) is a 
+[node.js](http://nodejs.org) module for providing extra functions for node.js applications.  
 
-utilex on [npm registry](http://npmjs.org/package/utilex)
+utilex on [npm registry](http://npmjs.org/package/utilex)  
+[![NPM](https://nodei.co/npm/utilex.png?compact=true)](https://nodei.co/npm/utilex/)
 
 ### Installation
 
@@ -43,7 +45,7 @@ utilex.tidyArgs();
 // {"arg1":"arg1Val","arg2":"","arg3":"arg3Val","arg4":"","arg5":"","c":"test/config-test.json"}
 
 utilex.tidyConfig();
-// command: node -c test/config-test.json
+// command arg: -c test/config-test.json
 // config-test.json: {"testKey": "testVal"}
 //
 // {"file":"test/config-test.json","config":{"testKey":"testVal"}}
