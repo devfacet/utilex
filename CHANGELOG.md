@@ -5,6 +5,11 @@
 ```
 ```
 
+### 0.2.12 (2014-04-29)
+
+* Add tidyLen
+* Add Dependency Status
+
 ### 0.2.11 (2014-04-26)
 
 * Add unit test
