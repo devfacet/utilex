@@ -41,6 +41,12 @@ utilex.tidyTime(new Date(1388638740000));
 utilex.tidyLog('Tidy log...');
 // { time: '2014-01-25 14:08:39', message: 'Tidy log...' }
 
+utilex.tidyLen('Hello 世界');
+// 8
+
+utilex.tidyLen('Hello 世界', true);
+// 12
+
 utilex.tidyArgs();
 // command: node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
 //
