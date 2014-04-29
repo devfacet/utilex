@@ -4,7 +4,9 @@
 [node.js](http://nodejs.org) module for providing extra functions for node.js applications.  
 
 utilex on [npm registry](http://npmjs.org/package/utilex)  
-[![NPM](https://nodei.co/npm/utilex.png?compact=true)](https://nodei.co/npm/utilex/)
+
+[![NPM][npm-image]][npm-url] | [![Build Status][travis-image]][travis-url] | [![Dependency Status][depstatus-image]][depstatus-url]
+---------- | ---------- | ----------
 
 ### Installation
 
@@ -17,7 +19,6 @@ For HEAD
 ```
 git clone https://github.com/cmfatih/utilex.git
 ```
-[![Build Status](https://travis-ci.org/cmfatih/utilex.svg?branch=master)](https://travis-ci.org/cmfatih/utilex)
 
 ### Usage
 
@@ -81,3 +82,12 @@ For all notable changes see [CHANGELOG.md](https://github.com/cmfatih/utilex/blo
 Copyright (c) 2013 Fatih Cetinkaya (http://github.com/cmfatih/utilex)  
 Licensed under The MIT License (MIT)  
 For the full copyright and license information, please view the LICENSE.txt file.
+
+[npm-url]: http://npmjs.org/package/utilex
+[npm-image]: https://nodei.co/npm/utilex.png?compact=true
+
+[travis-url]: https://travis-ci.org/cmfatih/utilex
+[travis-image]: https://travis-ci.org/cmfatih/utilex.svg?branch=master
+
+[depstatus-url]: https://david-dm.org/cmfatih/utilex
+[depstatus-image]: https://david-dm.org/cmfatih/utilex.png
