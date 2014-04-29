@@ -17,27 +17,27 @@ var utilex = require('../'),
 describe('utilex', function() {
 
   // Test for tidy time
-  describe('tidyTime', function() {
+  describe('tidyTime()', function() {
     var tidyTime1 = utilex.tidyTime(),
         tidyTime2 = utilex.tidyTime(new Date(1388638740000))
     ;
 
-    it('tidyTime() should return a time (' + tidyTime1 + ')', function(done) {
+    it('should return the tidy time (' + tidyTime1 + ')', function(done) {
       expect(tidyTime1).to.be.a('string');
       done();
     });
 
-    it('tidyTime(new Date(1388638740000)) should return a time (' + tidyTime2 + ')', function(done) {
+    it('should return the tidy time for the given time (' + tidyTime2 + ')', function(done) {
       expect(tidyTime2).to.be.a('string');
       done();
     });
   });
 
   // Test for tidy log
-  describe('tidyLog', function() {
+  describe('tidyLog()', function() {
     var tidyLog = utilex.tidyLog('A log message', false);
 
-    it("tidyLog('A log message') should return a log message (" + JSON.stringify(tidyLog) + ')', function(done) {
+    it("should return a tidy log message (" + JSON.stringify(tidyLog) + ')', function(done) {
       expect(tidyLog).to.be.a('object');
       expect(tidyLog).to.have.property('time');
       expect(tidyLog).to.have.property('message');
@@ -46,10 +46,10 @@ describe('utilex', function() {
   });
 
   // Test for tidy arguments
-  describe('tidyArgs', function() {
+  describe('tidyArgs()', function() {
     var tidyArgs = utilex.tidyArgs();
 
-    it('tidyArgs() should return command line arguments', function(done) {
+    it('should return command line arguments', function(done) {
       expect(tidyArgs).to.be.a('object');
       expect(tidyArgs).to.have.property('arg1', 'arg1Val');
       expect(tidyArgs).to.have.property('arg2', '');
@@ -62,10 +62,10 @@ describe('utilex', function() {
   });
 
   // Test for tidy config
-  describe('tidyConfig', function() {
+  describe('tidyConfig()', function() {
     var tidyConfig = utilex.tidyConfig();
 
-    it('tidyConfig() should return config (' + JSON.stringify(tidyConfig) + ')', function(done) {
+    it('should return configuration (' + JSON.stringify(tidyConfig) + ')', function(done) {
       expect(tidyConfig).to.be.a('object');
       expect(tidyConfig).to.have.property('file', 'test/config-test.json');
       expect(tidyConfig).to.have.property('config');
@@ -76,20 +76,20 @@ describe('utilex', function() {
   });
 
   // Test for dirIsWritable
-  describe('dirIsWritable', function() {
+  describe('dirIsWritable()', function() {
     var dirIsWritable = utilex.dirIsWritable(__dirname);
 
-    it('dirIsWritable(__dirname) should run without any error (' + dirIsWritable + ')', function(done) {
+    it('should check whether the given directory is writable or not (' + dirIsWritable + ')', function(done) {
       expect(dirIsWritable).to.be.a('boolean');
       done();
     });
   });
 
   // Test for httpGetFile
-  describe('httpGetFile', function() {
+  describe('httpGetFile()', function() {
     var fp = './nodejs-logo.svg';
 
-    it('httpGetFile() should run without any error', function(done) {
+    it('should get the given url', function(done) {
       utilex.httpGetFile('http://nodejs.org/images/logo.svg', fp).then(function(path) {
         fs.unlink(fp, function(err) {
           if(!err) {
@@ -108,17 +108,17 @@ describe('utilex', function() {
   describe('others', function() {
     var tidyConfig = utilex.pathSep;
 
-    it('pathSep should return platform-specific file separator. (' + utilex.pathSep + ')', function(done) {
+    it('pathSep should return platform-specific file separator (' + utilex.pathSep + ')', function(done) {
       expect(utilex.pathSep).to.be.a('string');
       done();
     });
 
-    it('pathCur should return current path. (' + utilex.pathCur + ')', function(done) {
+    it('pathCur should return current path (' + utilex.pathCur + ')', function(done) {
       expect(utilex.pathCur).to.be.a('string');
       done();
     });
 
-    it('envMode should return environment mode. (' + utilex.envMode + ')', function(done) {
+    it('envMode should return environment mode (' + utilex.envMode + ')', function(done) {
       expect(utilex.envMode).to.be.a('null');
       done();
     });
