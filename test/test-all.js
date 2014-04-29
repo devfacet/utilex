@@ -75,6 +75,26 @@ describe('utilex', function() {
     });
   });
 
+  // Test for tidy length
+  describe('tidyLen()', function() {
+    var helloStr      = 'Hello 世界',
+        helloStrLen   = utilex.tidyLen(helloStr),
+        helloStrLenB  = utilex.tidyLen(helloStr, true)
+    ;
+
+    it('should return correct string length (' + helloStr + ' / 8)', function(done) {
+      expect(helloStrLen).to.be.a('number');
+      expect(helloStrLen).to.be.equal(8);
+      done();
+    });
+
+    it('should return correct byte length (' + helloStr + ' / 12)', function(done) {
+      expect(helloStrLenB).to.be.a('number');
+      expect(helloStrLenB).to.be.equal(12);
+      done();
+    });
+  });  
+
   // Test for dirIsWritable
   describe('dirIsWritable()', function() {
     var dirIsWritable = utilex.dirIsWritable(__dirname);
