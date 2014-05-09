@@ -5,7 +5,7 @@
 
 utilex on [npm registry](http://npmjs.org/package/utilex)  
 
-[![NPM][npm-image]][npm-url] | [![Build Status][travis-image]][travis-url] | [![Dependency Status][depstatus-image]][depstatus-url]
+[![Build Status][travis-image]][travis-url] | [![Dependency Status][depstatus-image]][depstatus-url] | [![NPM][npm-image]][npm-url]
 ---------- | ---------- | ----------
 
 ### Installation
@@ -66,7 +66,7 @@ utilex.pathCur;
 
 utilex.envMode;
 // process.env: NODE_ENV
-// DEV
+// development
 
 utilex.dirIsWritable(__dirname);
 // true
@@ -90,7 +90,7 @@ Licensed under The MIT License (MIT)
 For the full copyright and license information, please view the LICENSE.txt file.
 
 [npm-url]: http://npmjs.org/package/utilex
-[npm-image]: https://nodei.co/npm/utilex.png?compact=true
+[npm-image]: https://badge.fury.io/js/utilex.png
 
 [travis-url]: https://travis-ci.org/cmfatih/utilex
 [travis-image]: https://travis-ci.org/cmfatih/utilex.svg?branch=master
