@@ -41,7 +41,7 @@ describe('utilex', function() {
       expect(tidyLog).to.be.a('object');
       expect(tidyLog).to.have.property('time');
       expect(tidyLog).to.have.property('message');
-      done(); 
+      done();
     });
   });
 
@@ -93,7 +93,7 @@ describe('utilex', function() {
       expect(helloStrLenB).to.be.equal(12);
       done();
     });
-  });  
+  });
 
   // Test for dirIsWritable
   describe('dirIsWritable()', function() {
@@ -139,7 +139,7 @@ describe('utilex', function() {
     });
 
     it('envMode should return environment mode (' + utilex.envMode + ')', function(done) {
-      expect(utilex.envMode).to.be.a('null');
+      expect(utilex.envMode).to.be.equal('development');
       done();
     });
   });
