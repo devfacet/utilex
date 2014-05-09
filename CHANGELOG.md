@@ -5,6 +5,11 @@
 ```
 ```
 
+### 0.2.13 (2014-05-09)
+
+* Change npm badge
+* Change envMode
+
 ### 0.2.12 (2014-04-29)
 
 * Add tidyLen
