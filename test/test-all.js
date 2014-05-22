@@ -110,7 +110,7 @@ describe('utilex', function() {
     var fp = './nodejs-logo.svg';
 
     it('should get the given url', function(done) {
-      utilex.httpGetFile('http://nodejs.org/images/logo.svg', fp).then(function(path) {
+      utilex.httpGetFile('http://nodejs.org/images/logo.svg', fp).then(function() {
         fs.unlink(fp, function(err) {
           if(!err) {
             done();
@@ -126,8 +126,6 @@ describe('utilex', function() {
 
   // Test for others
   describe('others', function() {
-    var tidyConfig = utilex.pathSep;
-
     it('pathSep should return platform-specific file separator (' + utilex.pathSep + ')', function(done) {
       expect(utilex.pathSep).to.be.a('string');
       done();
