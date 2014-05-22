@@ -5,6 +5,11 @@
 ```
 ```
 
+### 0.2.14 (2014-05-22)
+
+* Update badges
+* Misc. updates
+
 ### 0.2.13 (2014-05-09)
 
 * Change npm badge
