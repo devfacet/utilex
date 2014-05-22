@@ -1,12 +1,10 @@
 ## Utilex
 
-[utilex](http://github.com/cmfatih/utilex) is a 
-[node.js](http://nodejs.org) module for providing extra functions for node.js applications.  
+[utilex](http://github.com/cmfatih/utilex) is a Node.js module for 
+providing extra functions for node.js applications.  
 
-utilex on [npm registry](http://npmjs.org/package/utilex)  
-
-[![Build Status][travis-image]][travis-url] | [![Dependency Status][depstatus-image]][depstatus-url] | [![NPM][npm-image]][npm-url]
----------- | ---------- | ----------
+[![Build Status][travis-image]][travis-url] | [![NPM][npm-image]][npm-url]
+---------- | ----------
 
 ### Installation
 
@@ -94,6 +92,3 @@ For the full copyright and license information, please view the LICENSE.txt file
 
 [travis-url]: https://travis-ci.org/cmfatih/utilex
 [travis-image]: https://travis-ci.org/cmfatih/utilex.svg?branch=master
-
-[depstatus-url]: https://david-dm.org/cmfatih/utilex
-[depstatus-image]: https://david-dm.org/cmfatih/utilex.png
