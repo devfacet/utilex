@@ -30,27 +30,27 @@ npm test
 ```javascript
 var utilex = require('utilex');
 
-utilex.tidyTime();
+utilex.datetime();
 // 2014-01-25 14:05:22
 
-utilex.tidyTime(new Date(1388638740000));
+utilex.datetime(new Date(1388638740000));
 // 2014-01-01 23:59:00
 
-utilex.tidyLog('Tidy log...');
+utilex.conLog('Tidy log...');
 // { time: '2014-01-25 14:08:39', message: 'Tidy log...' }
 
-utilex.tidyLen('Hello 世界');
+utilex.strLen('Hello 世界');
 // 8
 
-utilex.tidyLen('Hello 世界', true);
+utilex.strLen('Hello 世界', true);
 // 12
 
-utilex.tidyArgs();
+utilex.appArgs();
 // command: node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
 //
 // {"arg1":"arg1Val","arg2":"","arg3":"arg3Val","arg4":"","arg5":"","c":"test/config-test.json"}
 
-utilex.tidyConfig();
+utilex.appConfig();
 // command arg: -c test/config-test.json
 // config-test.json: {"testKey": "testVal"}
 //

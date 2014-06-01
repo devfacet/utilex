@@ -8,78 +8,77 @@ process.argv.push('--arg1', 'arg1Val', '--arg2', '-arg3', 'arg3Val', 'arg4', 'ar
 
 var utilex = require('../'),
     fs     = require('fs'),
-    expect = require('chai').expect
-;
+    expect = require('chai').expect;
 
 // Tests
 
 // Test for utilex module
 describe('utilex', function() {
 
-  // Test for tidy time
-  describe('tidyTime()', function() {
-    var tidyTime1 = utilex.tidyTime(),
-        tidyTime2 = utilex.tidyTime(new Date(1388638740000))
+  // Test for datetime
+  describe('datetime()', function() {
+    var datetime1 = utilex.datetime(),
+        datetime2 = utilex.datetime(new Date(1388638740000))
     ;
 
-    it('should return the tidy time (' + tidyTime1 + ')', function(done) {
-      expect(tidyTime1).to.be.a('string');
+    it('should return the tidy time (' + datetime1 + ')', function(done) {
+      expect(datetime1).to.be.a('string');
       done();
     });
 
-    it('should return the tidy time for the given time (' + tidyTime2 + ')', function(done) {
-      expect(tidyTime2).to.be.a('string');
-      done();
-    });
-  });
-
-  // Test for tidy log
-  describe('tidyLog()', function() {
-    var tidyLog = utilex.tidyLog('A log message', false);
-
-    it("should return a tidy log message (" + JSON.stringify(tidyLog) + ')', function(done) {
-      expect(tidyLog).to.be.a('object');
-      expect(tidyLog).to.have.property('time');
-      expect(tidyLog).to.have.property('message');
+    it('should return the tidy time for the given time (' + datetime2 + ')', function(done) {
+      expect(datetime2).to.be.a('string');
       done();
     });
   });
 
-  // Test for tidy arguments
-  describe('tidyArgs()', function() {
-    var tidyArgs = utilex.tidyArgs();
+  // Test for conLog
+  describe('conLog()', function() {
+    var conLog = utilex.conLog('A log message', false);
+
+    it("should return a tidy log message (" + JSON.stringify(conLog) + ')', function(done) {
+      expect(conLog).to.be.a('object');
+      expect(conLog).to.have.property('time');
+      expect(conLog).to.have.property('message');
+      done();
+    });
+  });
+
+  // Test for appArgs
+  describe('appArgs()', function() {
+    var appArgs = utilex.appArgs();
 
     it('should return command line arguments', function(done) {
-      expect(tidyArgs).to.be.a('object');
-      expect(tidyArgs).to.have.property('arg1', 'arg1Val');
-      expect(tidyArgs).to.have.property('arg2', '');
-      expect(tidyArgs).to.have.property('arg3', 'arg3Val');
-      expect(tidyArgs).to.have.property('arg4', '');
-      expect(tidyArgs).to.have.property('arg5', '');
-      expect(tidyArgs).to.have.property('c', 'test/config-test.json');
+      expect(appArgs).to.be.a('object');
+      expect(appArgs).to.have.property('arg1', 'arg1Val');
+      expect(appArgs).to.have.property('arg2', '');
+      expect(appArgs).to.have.property('arg3', 'arg3Val');
+      expect(appArgs).to.have.property('arg4', '');
+      expect(appArgs).to.have.property('arg5', '');
+      expect(appArgs).to.have.property('c', 'test/config-test.json');
       done();
     });
   });
 
-  // Test for tidy config
-  describe('tidyConfig()', function() {
-    var tidyConfig = utilex.tidyConfig();
+  // Test for appConfig
+  describe('appConfig()', function() {
+    var appConfig = utilex.appConfig();
 
-    it('should return configuration (' + JSON.stringify(tidyConfig) + ')', function(done) {
-      expect(tidyConfig).to.be.a('object');
-      expect(tidyConfig).to.have.property('file', 'test/config-test.json');
-      expect(tidyConfig).to.have.property('config');
-      expect(tidyConfig.config).to.be.a('object');
-      expect(tidyConfig.config).to.have.property('testKey', 'testVal');
+    it('should return configuration (' + JSON.stringify(appConfig) + ')', function(done) {
+      expect(appConfig).to.be.a('object');
+      expect(appConfig).to.have.property('file', 'test/config-test.json');
+      expect(appConfig).to.have.property('config');
+      expect(appConfig.config).to.be.a('object');
+      expect(appConfig.config).to.have.property('testKey', 'testVal');
       done();
     });
   });
 
-  // Test for tidy length
-  describe('tidyLen()', function() {
+  // Test for strLen
+  describe('strLen()', function() {
     var helloStr      = 'Hello 世界',
-        helloStrLen   = utilex.tidyLen(helloStr),
-        helloStrLenB  = utilex.tidyLen(helloStr, true)
+        helloStrLen   = utilex.strLen(helloStr),
+        helloStrLenB  = utilex.strLen(helloStr, true)
     ;
 
     it('should return correct string length (' + helloStr + ' / 8)', function(done) {
