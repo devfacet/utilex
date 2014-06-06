@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.3.1 (2014-06-06)
+
+* Change config file arg
+
 ### 0.3.0 (2014-06-06)
 
 * Change method names
