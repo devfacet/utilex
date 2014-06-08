@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.3.2 (2014-06-07)
+
+* Add packageJSON
+
 ### 0.3.1 (2014-06-06)
 
 * Change config file arg
