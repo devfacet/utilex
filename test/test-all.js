@@ -123,6 +123,18 @@ describe('utilex', function() {
     });
   });
 
+  // Test for packageJSON
+  describe('packageJSON()', function() {
+    var packageJSON = utilex.packageJSON('package.json');
+
+    it('should return package.json content', function(done) {
+      expect(packageJSON).to.be.a('object');
+      expect(packageJSON).to.have.property('name', 'utilex');
+      expect(packageJSON).to.have.property('version');
+      done();
+    });
+  });
+
   // Test for others
   describe('others', function() {
     it('pathSep should return platform-specific file separator (' + utilex.pathSep + ')', function(done) {
