@@ -75,6 +75,9 @@ utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').the
   console.log(err);
 });
 // done!
+
+utilex.packageJSON('package.json');
+// { name: 'utilex', ... }
 ```
 
 ### Changelog
