@@ -123,11 +123,22 @@ describe('utilex', function() {
     });
   });
 
+  // Test for jsonLoad
+  describe('jsonLoad()', function() {
+    var jsonLoad = utilex.jsonLoad('test/config-test.json');
+
+    it('should load and return an object', function(done) {
+      expect(jsonLoad).to.be.a('object');
+      expect(jsonLoad).to.have.property('testKey', 'testVal');
+      done();
+    });
+  });
+
   // Test for packageJSON
   describe('packageJSON()', function() {
-    var packageJSON = utilex.packageJSON('package.json');
+    var packageJSON = utilex.packageJSON();
 
-    it('should return package.json content', function(done) {
+    it('should return an object for package.json', function(done) {
       expect(packageJSON).to.be.a('object');
       expect(packageJSON).to.have.property('name', 'utilex');
       expect(packageJSON).to.have.property('version');

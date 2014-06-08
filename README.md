@@ -76,6 +76,9 @@ utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').the
 });
 // done!
 
+utilex.jsonLoad('test/config-test.json');
+// { testKey: 'testVal' }
+
 utilex.packageJSON('package.json');
 // { name: 'utilex', ... }
 ```
