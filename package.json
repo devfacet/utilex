@@ -1,7 +1,7 @@
 {
   "name": "utilex",
-  "version": "0.3.3",
-  "description": "utilex module provides extra functions for node.js applications.",
+  "version": "1.0.0",
+  "description": "utilex module provides extra functions.",
   "keywords": [
     "node",
     "util",
@@ -26,16 +26,13 @@
   "contributors": [],
   "main": "lib/utilex.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha --timeout 5000 --reporter spec test/test-all.js"
+    "test": "node node_modules/mocha/bin/mocha --timeout 5000 --reporter spec test/test-all.js"
   },
   "engines": [
-    "node >= 0.10.21"
+    "node >= 0.10.20"
   ],
-  "dependencies": {
-    "q": "1.0.x"
-  },
   "devDependencies": {
-    "chai": "*",
-    "mocha": "*"
+    "mocha": "1.20.x",
+    "chai": "1.9.x"
   }
 }

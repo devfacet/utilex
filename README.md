@@ -1,10 +1,8 @@
 ## Utilex
+[![NPM][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 [utilex](http://github.com/cmfatih/utilex) is a Node.js module for 
-providing extra functions for node.js applications.  
-
-[![Build Status][travis-image]][travis-url] | [![NPM][npm-image]][npm-url]
----------- | ----------
+providing extra functions.  
 
 ### Installation
 
@@ -69,10 +67,10 @@ utilex.envMode;
 utilex.dirIsWritable(__dirname);
 // true
 
-utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg').then(function() {
+utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg', function(err, fp) {
+  if(err) console.log(err);
+
   console.log('done!');
-}, function(err) {
-  console.log(err);
 });
 // done!
 
