@@ -12,7 +12,7 @@ var utilex = require('../'),
 
 // Tests
 
-// Test for utilex module
+// Test for the module
 describe('utilex', function() {
 
   // Test for datetime
@@ -106,19 +106,15 @@ describe('utilex', function() {
 
   // Test for httpGetFile
   describe('httpGetFile()', function() {
-    var fp = './nodejs-logo.svg';
-
     it('should get the given url', function(done) {
-      utilex.httpGetFile('http://nodejs.org/images/logo.svg', fp).then(function() {
+      utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg', function(err, fp) {
+        if(err) done(err);
+
         fs.unlink(fp, function(err) {
-          if(!err) {
-            done();
-          } else {
-            done(err);
-          }
+          if(err) done(err);
+          
+          done();
         });
-      }, function(err) {
-        done(err);
       });
     });
   });
