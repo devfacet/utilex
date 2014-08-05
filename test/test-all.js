@@ -142,6 +142,27 @@ describe('utilex', function() {
     });
   });
 
+  // Test for asyncFunc
+  describe('asyncFunc()', function() {
+    it('should return the correct result', function(done) {
+      utilex.asyncFunc('hello', function(result) {
+        expect(result).to.be.a('object');
+        expect(result).to.have.property('input').to.be.equal('hello');
+        expect(result).to.have.property('execTime').to.be.a('number').to.be.above(0);
+        done();
+      });
+    });
+
+    it('should return the correct result (options)', function(done) {
+      utilex.asyncFunc('hello', {delay: 99}, function(result) {
+        expect(result).to.be.a('object');
+        expect(result).to.have.property('input').to.be.equal('hello');
+        expect(result).to.have.property('execTime').to.be.equal(99);
+        done();
+      });
+    });
+  });
+
   // Test for others
   describe('others', function() {
     it('pathSep should return platform-specific file separator (' + utilex.pathSep + ')', function(done) {
