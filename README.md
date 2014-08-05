@@ -80,7 +80,7 @@ utilex.packageJSON('package.json');
 // { name: 'utilex', ... }
 
 utilex.asyncFunc('hello', function(result) { console.log(result); });
-// { args: 'hello', execTime: 96 }
+// { input: 'hello', execTime: 95 }
 
 [
   utilex.asyncFunc('Always', {delay: 250}, console.log),
@@ -88,10 +88,10 @@ utilex.asyncFunc('hello', function(result) { console.log(result); });
   utilex.asyncFunc('on', console.log),
   utilex.asyncFunc('JS', console.log)
 ];
-// { args: 'on', execTime: 125 }
-// { args: 'bet', execTime: 165 }
-// { args: 'JS', execTime: 175 }
-// { args: 'Always', execTime: 250 }
+// { input: 'on', execTime: 125 }
+// { input: 'bet', execTime: 165 }
+// { input: 'JS', execTime: 175 }
+// { input: 'Always', execTime: 250 }
 ```
 
 ### Changelog
