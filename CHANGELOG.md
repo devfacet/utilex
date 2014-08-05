@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.1.0 (2014-08-05)
+
+* Add asyncFunc
+* Update devDependencies
+
 ### 1.0.0 (2014-07-04)
 
 * Stable release
