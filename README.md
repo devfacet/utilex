@@ -6,14 +6,14 @@ providing extra functions.
 
 ### Installation
 
-For latest release
 ```
+# For latest release
 npm install utilex
-```
 
-For HEAD
-```
+# For HEAD
 git clone https://github.com/cmfatih/utilex.git
+cd utilex
+npm install
 ```
 
 ### Usage
