@@ -87,7 +87,6 @@ For all notable changes see [CHANGELOG.md](https://github.com/cmfatih/utilex/blo
 
 ### License
 
-Copyright (c) 2013 Fatih Cetinkaya (http://github.com/cmfatih/utilex)  
 Licensed under The MIT License (MIT)  
 For the full copyright and license information, please view the LICENSE.txt file.
 
