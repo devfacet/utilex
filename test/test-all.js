@@ -158,9 +158,5 @@ describe('utilex', function() {
       done();
     });
 
-    it('envMode should return environment mode (' + utilex.envMode + ')', function(done) {
-      expect(utilex.envMode).to.be.equal('development');
-      done();
-    });
   });
 });
