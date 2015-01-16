@@ -10,38 +10,34 @@ var utilex = require('../'),
 
 // Tests
 
-// Test for the module
 describe('utilex', function() {
 
-  // Test for datetime
   describe('datetime()', function() {
     var datetime1 = utilex.datetime(),
-        datetime2 = utilex.datetime(new Date(1388638740000));
+        datetime2 = utilex.datetime(new Date(1421370000000));
 
-    it('should return the tidy time (' + datetime1 + ')', function(done) {
+    it('should return a tidy time (' + datetime1 + ')', function(done) {
       expect(datetime1).to.be.a('string');
       done();
     });
 
-    it('should return the tidy time for the given time (' + datetime2 + ')', function(done) {
-      expect(datetime2).to.be.a('string');
+    it('should return a tidy time (arg) (' + datetime2 + ')', function(done) {
+      expect(datetime2).to.be.a('string').to.be.equal('2015-01-15 20:00:00');
       done();
     });
   });
 
-  // Test for conLog
   describe('conLog()', function() {
-    var conLog = utilex.conLog('A log message', false);
+    var conLog = utilex.conLog('Tidy log...', false);
 
     it("should return a tidy log message (" + JSON.stringify(conLog) + ')', function(done) {
       expect(conLog).to.be.a('object');
       expect(conLog).to.have.property('time');
-      expect(conLog).to.have.property('message');
+      expect(conLog).to.have.property('message').to.be.equal('Tidy log...');
       done();
     });
   });
 
-  // Test for appArgs
   describe('appArgs()', function() {
     var appArgs = utilex.appArgs();
 
@@ -57,7 +53,6 @@ describe('utilex', function() {
     });
   });
 
-  // Test for appConfig
   describe('appConfig()', function() {
     var appConfig = utilex.appConfig();
 
@@ -71,38 +66,33 @@ describe('utilex', function() {
     });
   });
 
-  // Test for strLen
   describe('strLen()', function() {
     var helloStr      = 'Hello 世界',
         helloStrLen   = utilex.strLen(helloStr),
         helloStrLenB  = utilex.strLen(helloStr, true);
 
     it('should return correct string length (' + helloStr + ' / 8)', function(done) {
-      expect(helloStrLen).to.be.a('number');
-      expect(helloStrLen).to.be.equal(8);
+      expect(helloStrLen).to.be.a('number').to.be.equal(8);
       done();
     });
 
     it('should return correct byte length (' + helloStr + ' / 12)', function(done) {
-      expect(helloStrLenB).to.be.a('number');
-      expect(helloStrLenB).to.be.equal(12);
+      expect(helloStrLenB).to.be.a('number').be.equal(12);
       done();
     });
   });
 
-  // Test for dirIsWritable
   describe('dirIsWritable()', function() {
     var dirIsWritable = utilex.dirIsWritable(__dirname);
 
-    it('should check whether the given directory is writable or not (' + dirIsWritable + ')', function(done) {
+    it('should check whether a directory is writable or not (' + dirIsWritable + ')', function(done) {
       expect(dirIsWritable).to.be.a('boolean');
       done();
     });
   });
 
-  // Test for httpGetFile
   describe('httpGetFile()', function() {
-    it('should get the given url', function(done) {
+    it('should get a file', function(done) {
       utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg', function(err, fp) {
         if(err) done(err);
 
@@ -114,11 +104,10 @@ describe('utilex', function() {
     });
   });
 
-  // Test for jsonLoad
   describe('jsonLoad()', function() {
     var jsonLoad = utilex.jsonLoad('test/config-test.json');
 
-    it('should load and return an object', function(done) {
+    it('should load a JSON file', function(done) {
       expect(jsonLoad).to.be.a('object');
       expect(jsonLoad).to.have.property('testKey', 'testVal');
       done();
@@ -127,7 +116,7 @@ describe('utilex', function() {
 
   // Test for asyncFunc
   describe('asyncFunc()', function() {
-    it('should return the correct result', function(done) {
+    it('should run correctly', function(done) {
       utilex.asyncFunc('hello', function(result) {
         expect(result).to.be.a('object');
         expect(result).to.have.property('input').to.be.equal('hello');
@@ -136,7 +125,7 @@ describe('utilex', function() {
       });
     });
 
-    it('should return the correct result (options)', function(done) {
+    it('should run correctly (options)', function(done) {
       utilex.asyncFunc('hello', {delay: 99}, function(result) {
         expect(result).to.be.a('object');
         expect(result).to.have.property('input').to.be.equal('hello');
