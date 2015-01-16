@@ -148,10 +148,6 @@ describe('utilex', function() {
 
   // Test for others
   describe('others', function() {
-    it('pathSep should return platform-specific file separator (' + utilex.pathSep + ')', function(done) {
-      expect(utilex.pathSep).to.be.a('string');
-      done();
-    });
 
     it('pathCur should return current path (' + utilex.pathCur + ')', function(done) {
       expect(utilex.pathCur).to.be.a('string');
