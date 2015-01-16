@@ -135,4 +135,23 @@ describe('utilex', function() {
     });
   });
 
+  describe('tasker()', function() {
+    it('should run correctly', function(done) {
+
+      var tasker = utilex.tasker();
+      tasker.results = [];
+      tasker.add({counter: 0});
+      tasker.run(function(task, next) {
+        tasker.results.push(++task.counter);
+        if(task.counter < 5) {
+          tasker.add({counter: task.counter});
+        }
+        next();
+      }, function() {
+        expect(tasker.results).to.be.a('array').to.be.deep.equal([1,2,3,4,5]);
+        done();
+      });
+    });
+  });
+
 });
