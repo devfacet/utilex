@@ -1,7 +1,5 @@
-// Init reqs
 /* jslint node: true */
-/* global describe: false */
-/* global it: false */
+/* global describe: false, it: false */
 'use strict';
 
 process.argv.push('--arg1', 'arg1Val', '--arg2', '-arg3', 'arg3Val', 'arg4', 'arg5', '-c', 'test/config-test.json');
@@ -18,8 +16,7 @@ describe('utilex', function() {
   // Test for datetime
   describe('datetime()', function() {
     var datetime1 = utilex.datetime(),
-        datetime2 = utilex.datetime(new Date(1388638740000))
-    ;
+        datetime2 = utilex.datetime(new Date(1388638740000));
 
     it('should return the tidy time (' + datetime1 + ')', function(done) {
       expect(datetime1).to.be.a('string');
@@ -78,8 +75,7 @@ describe('utilex', function() {
   describe('strLen()', function() {
     var helloStr      = 'Hello 世界',
         helloStrLen   = utilex.strLen(helloStr),
-        helloStrLenB  = utilex.strLen(helloStr, true)
-    ;
+        helloStrLenB  = utilex.strLen(helloStr, true);
 
     it('should return correct string length (' + helloStr + ' / 8)', function(done) {
       expect(helloStrLen).to.be.a('number');
@@ -112,7 +108,6 @@ describe('utilex', function() {
 
         fs.unlink(fp, function(err) {
           if(err) done(err);
-          
           done();
         });
       });
