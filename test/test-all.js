@@ -125,18 +125,6 @@ describe('utilex', function() {
     });
   });
 
-  // Test for packageJSON
-  describe('packageJSON()', function() {
-    var packageJSON = utilex.packageJSON();
-
-    it('should return an object for package.json', function(done) {
-      expect(packageJSON).to.be.a('object');
-      expect(packageJSON).to.have.property('name', 'utilex');
-      expect(packageJSON).to.have.property('version');
-      done();
-    });
-  });
-
   // Test for asyncFunc
   describe('asyncFunc()', function() {
     it('should return the correct result', function(done) {
