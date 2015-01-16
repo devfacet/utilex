@@ -1,7 +1,7 @@
 ## Utilex
 [![NPM][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
-[utilex](http://github.com/cmfatih/utilex) is a Node.js module for providing extra functions.  
+[utilex](http://github.com/cmfatih/utilex) is a Node.js module for providing extra functions.
 
 ### Installation
 
@@ -28,13 +28,13 @@ npm test
 var utilex = require('utilex');
 
 utilex.datetime();
-// 2014-01-25 14:05:22
+// 2015-01-15 20:00:00
 
-utilex.datetime(new Date(1388638740000));
-// 2014-01-01 23:59:00
+utilex.datetime(new Date(1421370000000));
+// 2015-01-15 20:00:00
 
 utilex.conLog('Tidy log...');
-// { time: '2014-01-25 14:08:39', message: 'Tidy log...' }
+// { time: '2015-01-15 20:00:00', message: 'Tidy log...' }
 
 utilex.strLen('Hello 世界');
 // 8
@@ -53,16 +53,6 @@ utilex.appConfig();
 //
 // {"file":"test/config-test.json","config":{"testKey":"testVal"}}
 
-utilex.pathSep;
-// /
-
-utilex.pathCur;
-// /srv/var/utilex
-
-utilex.envMode;
-// process.env: NODE_ENV
-// development
-
 utilex.dirIsWritable(__dirname);
 // true
 
@@ -75,9 +65,6 @@ utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg', fun
 
 utilex.jsonLoad('test/config-test.json');
 // { testKey: 'testVal' }
-
-utilex.packageJSON('package.json');
-// { name: 'utilex', ... }
 
 utilex.asyncFunc('hello', function(result) { console.log(result); });
 // { input: 'hello', execTime: 95 }
