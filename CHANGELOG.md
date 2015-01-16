@@ -1,5 +1,14 @@
 ## Changelog
 
+### 2.0.0 (2014-01-15)
+
+* Add tasker
+* Remove pathCur
+* Remove pathSep
+* Remove envMode
+* Remove packageJSON
+* Update devDependencies
+
 ### 1.1.0 (2014-08-05)
 
 * Add asyncFunc
