@@ -30,7 +30,7 @@ describe('utilex', function() {
   describe('conLog()', function() {
     var conLog = utilex.conLog('Tidy log...', false);
 
-    it("should return a tidy log message (" + JSON.stringify(conLog) + ')', function(done) {
+    it('should return a tidy log message (' + JSON.stringify(conLog) + ')', function(done) {
       expect(conLog).to.be.a('object');
       expect(conLog).to.have.property('time');
       expect(conLog).to.have.property('message').to.be.equal('Tidy log...');
