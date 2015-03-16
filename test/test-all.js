@@ -12,32 +12,6 @@ var utilex = require('../'),
 
 describe('utilex', function() {
 
-  describe('datetime()', function() {
-    var datetime1 = utilex.datetime(),
-        datetime2 = utilex.datetime(new Date(1421370000000));
-
-    it('should return a tidy time (' + datetime1 + ')', function(done) {
-      expect(datetime1).to.be.a('string');
-      done();
-    });
-
-    it('should return a tidy time (arg) (' + datetime2 + ')', function(done) {
-      expect(datetime2).to.be.a('string');
-      done();
-    });
-  });
-
-  describe('conLog()', function() {
-    var conLog = utilex.conLog('Tidy log...', false);
-
-    it('should return a tidy log message (' + JSON.stringify(conLog) + ')', function(done) {
-      expect(conLog).to.be.a('object');
-      expect(conLog).to.have.property('time');
-      expect(conLog).to.have.property('message').to.be.equal('Tidy log...');
-      done();
-    });
-  });
-
   describe('appArgs()', function() {
     var appArgs = utilex.appArgs();
 
@@ -66,18 +40,48 @@ describe('utilex', function() {
     });
   });
 
-  describe('strLen()', function() {
-    var helloStr      = 'Hello 世界',
-        helloStrLen   = utilex.strLen(helloStr),
-        helloStrLenB  = utilex.strLen(helloStr, true);
+  describe('asyncFunc()', function() {
+    it('should run correctly', function(done) {
+      utilex.asyncFunc('hello', function(result) {
+        expect(result).to.be.a('object');
+        expect(result).to.have.property('input').to.be.equal('hello');
+        expect(result).to.have.property('execTime').to.be.a('number').to.be.above(0);
+        done();
+      });
+    });
 
-    it('should return correct string length (' + helloStr + ' / 8)', function(done) {
-      expect(helloStrLen).to.be.a('number').to.be.equal(8);
+    it('should run correctly (options)', function(done) {
+      utilex.asyncFunc('hello', {delay: 99}, function(result) {
+        expect(result).to.be.a('object');
+        expect(result).to.have.property('input').to.be.equal('hello');
+        expect(result).to.have.property('execTime').to.be.equal(99);
+        done();
+      });
+    });
+  });
+
+  describe('conLog()', function() {
+    var conLog = utilex.conLog('Tidy log...', false);
+
+    it('should return a tidy log message (' + JSON.stringify(conLog) + ')', function(done) {
+      expect(conLog).to.be.a('object');
+      expect(conLog).to.have.property('time');
+      expect(conLog).to.have.property('message').to.be.equal('Tidy log...');
+      done();
+    });
+  });
+
+  describe('datetime()', function() {
+    var datetime1 = utilex.datetime(),
+        datetime2 = utilex.datetime(new Date(1421370000000));
+
+    it('should return a tidy time (' + datetime1 + ')', function(done) {
+      expect(datetime1).to.be.a('string');
       done();
     });
 
-    it('should return correct byte length (' + helloStr + ' / 12)', function(done) {
-      expect(helloStrLenB).to.be.a('number').be.equal(12);
+    it('should return a tidy time (arg) (' + datetime2 + ')', function(done) {
+      expect(datetime2).to.be.a('string');
       done();
     });
   });
@@ -93,7 +97,7 @@ describe('utilex', function() {
 
   describe('httpGetFile()', function() {
     it('should get a file', function(done) {
-      utilex.httpGetFile('http://nodejs.org/images/logo.svg', './nodejs-logo.svg', function(err, fp) {
+      utilex.httpGetFile('http://www.google.com/images/srpr/logo11w.png', './google-logo.png', function(err, fp) {
         if(err) done(err);
 
         fs.unlink(fp, function(err) {
@@ -114,24 +118,19 @@ describe('utilex', function() {
     });
   });
 
-  // Test for asyncFunc
-  describe('asyncFunc()', function() {
-    it('should run correctly', function(done) {
-      utilex.asyncFunc('hello', function(result) {
-        expect(result).to.be.a('object');
-        expect(result).to.have.property('input').to.be.equal('hello');
-        expect(result).to.have.property('execTime').to.be.a('number').to.be.above(0);
-        done();
-      });
+  describe('strLen()', function() {
+    var helloStr      = 'Hello 世界',
+        helloStrLen   = utilex.strLen(helloStr),
+        helloStrLenB  = utilex.strLen(helloStr, true);
+
+    it('should return correct string length (' + helloStr + ' / 8)', function(done) {
+      expect(helloStrLen).to.be.a('number').to.be.equal(8);
+      done();
     });
 
-    it('should run correctly (options)', function(done) {
-      utilex.asyncFunc('hello', {delay: 99}, function(result) {
-        expect(result).to.be.a('object');
-        expect(result).to.have.property('input').to.be.equal('hello');
-        expect(result).to.have.property('execTime').to.be.equal(99);
-        done();
-      });
+    it('should return correct byte length (' + helloStr + ' / 12)', function(done) {
+      expect(helloStrLenB).to.be.a('number').be.equal(12);
+      done();
     });
   });
 
