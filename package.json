@@ -32,7 +32,7 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
-    "mocha": "~2.1.0",
-    "chai": "~1.10.0"
+    "mocha": "2.2.x",
+    "chai": "2.1.x"
   }
 }
