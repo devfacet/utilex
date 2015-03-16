@@ -1,5 +1,9 @@
 ## Changelog
 
+### 2.0.1 (2014-01-15)
+
+* Misc. updates
+
 ### 2.0.0 (2014-01-15)
 
 * Add tasker
