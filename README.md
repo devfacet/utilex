@@ -145,6 +145,15 @@ tasker.run(function(task, next) {
 // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
+#### uid
+
+```javascript
+var utilex = require('utilex');
+
+utilex.uid();
+// '43cdacfded3a47298b32bfa47269fdd2b55b33d6'
+```
+
 ### License
 
 Licensed under The MIT License (MIT)  

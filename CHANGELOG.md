@@ -1,5 +1,9 @@
 ## Changelog
 
+### HEAD
+
+* Add uid
+
 ### 2.0.1 (2015-01-15)
 
 * Misc. updates
