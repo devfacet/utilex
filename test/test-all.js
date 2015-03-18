@@ -153,4 +153,14 @@ describe('utilex', function() {
     });
   });
 
+  describe('uid()', function() {
+    var uid = utilex.uid();
+
+    it('should return a unique id', function(done) {
+      expect(uid).to.be.a('string');
+      expect(uid).to.have.property('length', 40);
+      done();
+    });
+  });
+
 });
