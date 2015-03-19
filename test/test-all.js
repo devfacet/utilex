@@ -27,19 +27,6 @@ describe('utilex', function() {
     });
   });
 
-  describe('appConfig()', function() {
-    var appConfig = utilex.appConfig();
-
-    it('should return configuration (' + JSON.stringify(appConfig) + ')', function(done) {
-      expect(appConfig).to.be.a('object');
-      expect(appConfig).to.have.property('file', 'test/config-test.json');
-      expect(appConfig).to.have.property('config');
-      expect(appConfig.config).to.be.a('object');
-      expect(appConfig.config).to.have.property('testKey', 'testVal');
-      done();
-    });
-  });
-
   describe('asyncFunc()', function() {
     it('should run correctly', function(done) {
       utilex.asyncFunc('hello', function(result) {

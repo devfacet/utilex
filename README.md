@@ -30,18 +30,6 @@ utilex.appArgs();
 // }
 ```
 
-#### appConfig
-
-```javascript
-var utilex = require('utilex');
-
-utilex.appConfig();
-// command arg: -c test/config-test.json
-// config-test.json: {"testKey": "testVal"}
-//
-// {"file":"test/config-test.json","config":{"testKey":"testVal"}}
-```
-
 #### asyncFunc
 
 ```javascript
