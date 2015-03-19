@@ -62,15 +62,6 @@ utilex.asyncFunc('hello', function(result) { console.log(result); });
 // { input: 'Always', execTime: 250 }
 ```
 
-#### conLog
-
-```javascript
-var utilex = require('utilex');
-
-utilex.conLog('Tidy log...');
-// { time: '2015-01-15 20:00:00', message: 'Tidy log...' }
-```
-
 #### datetime
 
 ```javascript

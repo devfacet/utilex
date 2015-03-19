@@ -60,17 +60,6 @@ describe('utilex', function() {
     });
   });
 
-  describe('conLog()', function() {
-    var conLog = utilex.conLog('Tidy log...', false);
-
-    it('should return a tidy log message (' + JSON.stringify(conLog) + ')', function(done) {
-      expect(conLog).to.be.a('object');
-      expect(conLog).to.have.property('time');
-      expect(conLog).to.have.property('message').to.be.equal('Tidy log...');
-      done();
-    });
-  });
-
   describe('datetime()', function() {
     var datetime1 = utilex.datetime(),
         datetime2 = utilex.datetime(new Date(1421370000000));
