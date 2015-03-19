@@ -2,7 +2,7 @@
 /* global describe: false, it: false */
 'use strict';
 
-process.argv.push('--arg1', 'arg1Val', '--arg2', '-arg3', 'arg3Val', 'arg4', 'arg5', '-c', 'test/config-test.json');
+process.argv.push('--arg1', 'arg1Val', '--arg2', '-arg3', 'arg3Val', 'arg4', 'arg5', '-c', 'test/data-simple.json');
 
 var utilex = require('../'),
     fs     = require('fs'),
@@ -22,7 +22,7 @@ describe('utilex', function() {
       expect(args).to.have.property('arg3', 'arg3Val');
       expect(args).to.have.property('arg4', '');
       expect(args).to.have.property('arg5', '');
-      expect(args).to.have.property('c', 'test/config-test.json');
+      expect(args).to.have.property('c', 'test/data-simple.json');
       done();
     });
   });
@@ -85,7 +85,7 @@ describe('utilex', function() {
   });
 
   describe('jsonLoad()', function() {
-    var jsonLoad = utilex.jsonLoad('test/config-test.json');
+    var jsonLoad = utilex.jsonLoad('test/data-simple.json');
 
     it('should load a JSON file', function(done) {
       expect(jsonLoad).to.be.a('object');

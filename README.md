@@ -17,7 +17,7 @@ npm install utilex
 ```javascript
 var utilex = require('utilex');
 
-// command: node app.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
+// command: node app.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/data-simple.json
 utilex.args();
 // {
 //   "arg1": "arg1Val",
@@ -25,7 +25,7 @@ utilex.args();
 //   "arg3": "arg3Val",
 //   "arg4": "",
 //   "arg5": "",
-//   "c": "test/config-test.json"
+//   "c": "test/data-simple.json"
 // }
 ```
 
@@ -92,7 +92,7 @@ utilex.httpGetFile('http://www.google.com/images/srpr/logo11w.png', './google-lo
 ```javascript
 var utilex = require('utilex');
 
-utilex.jsonLoad('test/config-test.json');
+utilex.jsonLoad('test/data-simple.json');
 // { testKey: 'testVal' }
 ```
 
