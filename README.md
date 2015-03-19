@@ -50,6 +50,12 @@ utilex.asyncFunc('hello', function(result) { console.log(result); });
 // { input: 'Always', execTime: 250 }
 ```
 
+#### consoleClear
+
+```javascript
+node -e 'require("./lib/utilex").consoleClear()'
+```
+
 #### datetime
 
 ```javascript
