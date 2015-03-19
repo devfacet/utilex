@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Change/rename appArgs to args
 * Rename conClear to consoleClear
 * Remove appConfig
 * Remove conLog

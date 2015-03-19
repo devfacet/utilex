@@ -12,17 +12,17 @@ var utilex = require('../'),
 
 describe('utilex', function() {
 
-  describe('appArgs()', function() {
-    var appArgs = utilex.appArgs();
+  describe('args()', function() {
+    var args = utilex.args();
 
     it('should return command line arguments', function(done) {
-      expect(appArgs).to.be.a('object');
-      expect(appArgs).to.have.property('arg1', 'arg1Val');
-      expect(appArgs).to.have.property('arg2', '');
-      expect(appArgs).to.have.property('arg3', 'arg3Val');
-      expect(appArgs).to.have.property('arg4', '');
-      expect(appArgs).to.have.property('arg5', '');
-      expect(appArgs).to.have.property('c', 'test/config-test.json');
+      expect(args).to.be.a('object');
+      expect(args).to.have.property('arg1', 'arg1Val');
+      expect(args).to.have.property('arg2', '');
+      expect(args).to.have.property('arg3', 'arg3Val');
+      expect(args).to.have.property('arg4', '');
+      expect(args).to.have.property('arg5', '');
+      expect(args).to.have.property('c', 'test/config-test.json');
       done();
     });
   });

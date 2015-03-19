@@ -12,14 +12,13 @@ npm install utilex
 
 ### Usage
 
-#### appArgs
+#### args
 
 ```javascript
 var utilex = require('utilex');
 
-utilex.appArgs();
-// command: node ./test/test-all.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
-//
+// command: node app.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/config-test.json
+utilex.args();
 // {
 //   "arg1": "arg1Val",
 //   "arg2": "",
