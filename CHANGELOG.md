@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Remove datetime
 * Change/rename appArgs to args
 * Rename conClear to consoleClear
 * Remove appConfig

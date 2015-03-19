@@ -55,17 +55,6 @@ utilex.asyncFunc('hello', function(result) { console.log(result); });
 node -e 'require("./lib/utilex").consoleClear()'
 ```
 
-#### datetime
-
-```javascript
-var utilex = require('utilex');
-
-utilex.datetime();
-// 2015-01-15 20:00:00
-utilex.datetime(new Date(1421370000000));
-// 2015-01-15 20:00:00
-```
-
 #### dirIsWritable
 
 ```javascript

@@ -47,21 +47,6 @@ describe('utilex', function() {
     });
   });
 
-  describe('datetime()', function() {
-    var datetime1 = utilex.datetime(),
-        datetime2 = utilex.datetime(new Date(1421370000000));
-
-    it('should return a tidy time (' + datetime1 + ')', function(done) {
-      expect(datetime1).to.be.a('string');
-      done();
-    });
-
-    it('should return a tidy time (arg) (' + datetime2 + ')', function(done) {
-      expect(datetime2).to.be.a('string');
-      done();
-    });
-  });
-
   describe('dirIsWritable()', function() {
     var dirIsWritable = utilex.dirIsWritable(__dirname);
 
