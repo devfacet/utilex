@@ -44,14 +44,14 @@ utilex.dirIsWritable(__dirname);
 // true
 ```
 
-#### httpGetFile
+#### download
 
 ```javascript
 var utilex = require('utilex');
 
-utilex.httpGetFile('http://www.google.com/images/srpr/logo11w.png', './google-logo.png', function(err, fp) {
+utilex.download('http://www.google.com/images/srpr/logo11w.png', './google-logo.png', function(err, fp) {
   if(err) console.log(err);
-  console.log('done!');
+  console.log(fp + ' is downloaded.');
 });
 // done!
 ```
