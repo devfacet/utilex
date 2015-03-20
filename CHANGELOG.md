@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Change/rename httpGetFile to download
 * Remove asyncFunc
 * Remove datetime
 * Change/rename appArgs to args
