@@ -36,9 +36,19 @@ describe('utilex', function() {
     });
   });
 
-  describe('httpGetFile()', function() {
-    it('should get a file', function(done) {
-      utilex.httpGetFile('http://www.google.com/images/srpr/logo11w.png', './google-logo.png', function(err, fp) {
+  describe('download()', function() {
+    it('should download file (http)', function(done) {
+      utilex.download('http://www.google.com/images/srpr/logo11w.png', './google-logo.png', function(err, fp) {
+        if(err) done(err);
+
+        fs.unlink(fp, function(err) {
+          if(err) done(err);
+          done();
+        });
+      });
+    });
+    it('should download file (https)', function(done) {
+      utilex.download('https://www.google.com/images/srpr/logo11w.png', './google-logo-secure.png', function(err, fp) {
         if(err) done(err);
 
         fs.unlink(fp, function(err) {
