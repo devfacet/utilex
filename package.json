@@ -24,7 +24,7 @@
     "url": "http://github.com/cmfatih"
   },
   "contributors": [],
-  "main": "lib/utilex.js",
+  "main": "./index.js",
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha --timeout 5000 --reporter spec test/test-all.js"
   },
