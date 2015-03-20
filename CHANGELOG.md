@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Remove asyncFunc
 * Remove datetime
 * Change/rename appArgs to args
 * Rename conClear to consoleClear

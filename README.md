@@ -29,26 +29,6 @@ utilex.args();
 // }
 ```
 
-#### asyncFunc
-
-```javascript
-var utilex = require('utilex');
-
-utilex.asyncFunc('hello', function(result) { console.log(result); });
-// { input: 'hello', execTime: 95 }
-
-[
-  utilex.asyncFunc('Always', {delay: 250}, console.log),
-  utilex.asyncFunc('bet', console.log),
-  utilex.asyncFunc('on', console.log),
-  utilex.asyncFunc('JS', console.log)
-];
-// { input: 'on', execTime: 125 }
-// { input: 'bet', execTime: 165 }
-// { input: 'JS', execTime: 175 }
-// { input: 'Always', execTime: 250 }
-```
-
 #### consoleClear
 
 ```javascript

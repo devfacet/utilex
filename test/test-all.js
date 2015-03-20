@@ -27,26 +27,6 @@ describe('utilex', function() {
     });
   });
 
-  describe('asyncFunc()', function() {
-    it('should run correctly', function(done) {
-      utilex.asyncFunc('hello', function(result) {
-        expect(result).to.be.a('object');
-        expect(result).to.have.property('input').to.be.equal('hello');
-        expect(result).to.have.property('execTime').to.be.a('number').to.be.above(0);
-        done();
-      });
-    });
-
-    it('should run correctly (options)', function(done) {
-      utilex.asyncFunc('hello', {delay: 99}, function(result) {
-        expect(result).to.be.a('object');
-        expect(result).to.have.property('input').to.be.equal('hello');
-        expect(result).to.have.property('execTime').to.be.equal(99);
-        done();
-      });
-    });
-  });
-
   describe('dirIsWritable()', function() {
     var dirIsWritable = utilex.dirIsWritable(__dirname);
 
