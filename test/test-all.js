@@ -87,16 +87,15 @@ describe('utilex', function() {
 
   describe('tasker()', function() {
     it('should run correctly', function(done) {
-
       var tasker = utilex.tasker();
       tasker.results = [];
       tasker.add({counter: 0});
-      tasker.run(function(task, next) {
+      tasker.run(function(task, callback) {
         tasker.results.push(++task.counter);
         if(task.counter < 5) {
           tasker.add({counter: task.counter});
         }
-        next();
+        callback();
       }, function() {
         expect(tasker.results).to.be.a('array').to.be.deep.equal([1,2,3,4,5]);
         done();
