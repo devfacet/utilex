@@ -105,6 +105,8 @@ tasker.run(function(task, next) {
 
 #### uid
 
+Returns an unique id
+
 ```javascript
 utilex.uid();
 // '43cdacfded3a47298b32bfa47269fdd2b55b33d6'
