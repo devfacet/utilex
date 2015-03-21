@@ -1,6 +1,6 @@
 ## Changelog
 
-### HEAD
+### 3.0.0 (2015-03-21)
 
 * Change/rename httpGetFile to download
 * Remove asyncFunc
