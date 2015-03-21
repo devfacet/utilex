@@ -12,11 +12,15 @@ npm install utilex
 
 ### Usage
 
-#### args
-
 ```javascript
 var utilex = require('utilex');
+```
 
+#### args
+
+Returns command line arguments
+
+```javascript
 // command: node app.js --arg1 arg1Val --arg2 -arg3 arg3Val arg4 arg5 -c test/data-simple.json
 utilex.args();
 // {
@@ -31,24 +35,26 @@ utilex.args();
 
 #### consoleClear
 
+Clears console
+
 ```javascript
 node -e 'require("./lib/utilex").consoleClear()'
 ```
 
 #### dirIsWritable
 
-```javascript
-var utilex = require('utilex');
+Checks whether given directory is writable or not
 
+```javascript
 utilex.dirIsWritable(__dirname);
 // true
 ```
 
 #### download
 
-```javascript
-var utilex = require('utilex');
+Downloads file
 
+```javascript
 utilex.download('http://www.google.com/images/srpr/logo11w.png', './google-logo.png', function(err, fp) {
   if(err) console.log(err);
   console.log(fp + ' is downloaded.');
@@ -58,18 +64,18 @@ utilex.download('http://www.google.com/images/srpr/logo11w.png', './google-logo.
 
 #### jsonLoad
 
-```javascript
-var utilex = require('utilex');
+Loads JSON file
 
+```javascript
 utilex.jsonLoad('test/data-simple.json');
 // { testKey: 'testVal' }
 ```
 
 #### strLen
 
-```javascript
-var utilex = require('utilex');
+Returns the length of given string
 
+```javascript
 utilex.strLen('Hello 世界');
 // 8
 utilex.strLen('Hello 世界', true);
@@ -78,11 +84,10 @@ utilex.strLen('Hello 世界', true);
 
 #### tasker
 
-```javascript
-var utilex = require('utilex');
+Returns a tasker for handling async events
 
+```javascript
 var tasker = utilex.tasker();
-// Loop for async events
 
 tasker.results = [];
 tasker.add({counter: 0});
@@ -101,8 +106,6 @@ tasker.run(function(task, next) {
 #### uid
 
 ```javascript
-var utilex = require('utilex');
-
 utilex.uid();
 // '43cdacfded3a47298b32bfa47269fdd2b55b33d6'
 ```
