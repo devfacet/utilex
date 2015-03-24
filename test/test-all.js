@@ -64,7 +64,7 @@ describe('utilex', function() {
 
     it('should load a JSON file', function(done) {
       expect(jsonLoad).to.be.a('object');
-      expect(jsonLoad).to.have.property('testKey', 'testVal');
+      expect(jsonLoad).to.have.property('hello', 'world');
       done();
     });
   });
