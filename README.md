@@ -84,7 +84,9 @@ utilex.strLen('Hello 世界', true);
 
 #### tasker
 
-Returns a tasker for handling async events
+Returns a tasker
+
+##### tasker - simple
 
 ```javascript
 var tasker = utilex.tasker();
@@ -104,6 +106,31 @@ tasker.run(function(task, next) {           // run tasker
   console.log(tasker.results);              // done
 });
 // [ 1, 2, 3, 4, 5 ]
+```
+
+##### tasker - async
+
+```javascript
+var tasker = utilex.tasker();
+
+var asyncFunc = function asyncFunc(input, callback) {
+  setTimeout(function() { return callback(input); }, 0);
+};
+
+tasker.add('hello');
+tasker.run(function(task, next) {
+  asyncFunc(task, function(res) {
+    console.log(res);
+    if(res === 'hello') tasker.add('world');
+    return next();
+  });
+}, function() {
+  console.log('done!');
+});
+
+// hello
+// world
+// done!
 ```
 
 #### uid
