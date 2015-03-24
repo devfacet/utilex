@@ -68,7 +68,7 @@ Loads JSON file
 
 ```javascript
 utilex.jsonLoad('test/data-simple.json');
-// { testKey: 'testVal' }
+// { hello: 'world' }
 ```
 
 #### strLen
@@ -89,18 +89,21 @@ Returns a tasker for handling async events
 ```javascript
 var tasker = utilex.tasker();
 
-tasker.results = [];
-tasker.add({counter: 0});
-tasker.run(function(task, next) {
-  tasker.results.push(++task.counter);
-  if(task.counter < 10) {
-    tasker.add({counter: task.counter});
+tasker.results = [];                        // array for results
+tasker.add({counter: 0});                   // add a task
+
+tasker.run(function(task, next) {           // run tasker
+  tasker.results.push(++task.counter);      // push counter value to results
+
+  if(task.counter < 5) {
+    tasker.add({counter: task.counter});    // add more tasks if < 5
   }
-  next();
+
+  return next();                            // call next task
 }, function() {
-  console.log(tasker.results);
+  console.log(tasker.results);              // done
 });
-// [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+// [ 1, 2, 3, 4, 5 ]
 ```
 
 #### uid
