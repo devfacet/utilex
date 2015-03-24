@@ -59,7 +59,7 @@ utilex.download('http://www.google.com/images/srpr/logo11w.png', './google-logo.
   if(err) console.log(err);
   console.log(fp + ' is downloaded.');
 });
-// done!
+// ./google-logo.png is downloaded.
 ```
 
 #### jsonLoad
