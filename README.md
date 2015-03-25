@@ -118,10 +118,12 @@ var asyncFunc = function asyncFunc(input, callback) {
 };
 
 tasker.add('hello');
+tasker.add('world');
+
 tasker.run(function(task, next) {
   asyncFunc(task, function(res) {
     console.log(res);
-    if(res === 'hello') tasker.add('world');
+    if(res === 'world') tasker.add('hello world');
     return next();
   });
 }, function() {
@@ -130,6 +132,7 @@ tasker.run(function(task, next) {
 
 // hello
 // world
+// hello world
 // done!
 ```
 
