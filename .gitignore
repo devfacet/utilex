@@ -3,6 +3,7 @@ npm-debug.log
 
 .DS_Store
 .idea
+.settings/
 
 *.log
 *.heapsnapshot
@@ -11,4 +12,7 @@ npm-debug.log
 dump.rdb
 xunit.xml
 
+logs/*
+reports/*
+tmp/*
 sources/
