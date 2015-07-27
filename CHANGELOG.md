@@ -1,5 +1,9 @@
 ## Changelog
 
+### 3.0.1 (2015-07-26)
+
+* Misc.updates
+
 ### 3.0.0 (2015-03-21)
 
 * Change/rename httpGetFile to download
