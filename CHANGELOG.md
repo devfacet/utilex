@@ -1,5 +1,9 @@
 ## Changelog
 
+### 3.0.2 (2015-08-09)
+
+* Misc.updates
+
 ### 3.0.1 (2015-07-26)
 
 * Misc.updates
