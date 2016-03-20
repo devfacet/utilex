@@ -9,19 +9,19 @@
     "utility",
     "functions"
   ],
-  "homepage": "http://github.com/cmfatih/utilex",
+  "homepage": "http://github.com/fatihcode/utilex",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cmfatih/utilex.git"
+    "url": "https://github.com/fatihcode/utilex.git"
   },
   "bugs": {
-    "url": "http://github.com/cmfatih/utilex/issues"
+    "url": "http://github.com/fatihcode/utilex/issues"
   },
   "license": "MIT",
   "private": false,
   "author": {
-    "name": "cmfatih",
-    "url": "http://github.com/cmfatih"
+    "name": "fatih",
+    "url": "http://github.com/fatihcode"
   },
   "contributors": [],
   "main": "./index.js",

@@ -1,6 +1,6 @@
 /*
  * Utilex
- * Copyright (c) 2013 Fatih Cetinkaya (http://github.com/cmfatih/utilex)
+ * Copyright (c) 2013 Fatih Cetinkaya (http://github.com/fatihcode/utilex)
  * For the full copyright and license information, please view the LICENSE.txt file.
  */
 

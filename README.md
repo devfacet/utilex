@@ -151,7 +151,7 @@ Licensed under The MIT License (MIT)
 For the full copyright and license information, please view the LICENSE.txt file.
 
 [npm-url]: http://npmjs.org/package/utilex
-[npm-image]: https://badge.fury.io/js/utilex.png
+[npm-image]: https://badge.fury.io/js/utilex.svg
 
-[travis-url]: https://travis-ci.org/cmfatih/utilex
-[travis-image]: https://travis-ci.org/cmfatih/utilex.svg?branch=master
+[travis-url]: https://travis-ci.org/fatihcode/utilex
+[travis-image]: https://travis-ci.org/fatihcode/utilex.svg?branch=master
