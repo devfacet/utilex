@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.4 (2017-03-05)
+
+- Maintenance
+
 ## 3.0.3 (2016-03-20)
 
 - Maintenance

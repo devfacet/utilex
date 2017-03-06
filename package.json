@@ -1,6 +1,6 @@
 {
   "name": "utilex",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "A module that provides extra functions",
   "main": "index.js",
   "scripts": {
